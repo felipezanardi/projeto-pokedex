@@ -1,0 +1,115 @@
+/* 
+to-do: 
+    - adicionar fonte (SF Pro ou outra)
+    - finalizar parte visual
+    - responsividade
+    - mudar idioma
+    - tamanho elementos
+*/
+
+@charset "UTF-8";
+
+:root {
+    --corPreto: #000000;
+    --corBranco: #FFFFFF;
+    --cor1: #E60033;
+    --cor2: #0095D9;
+
+    --fonte-padrao: SF Pro, Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+}
+
+header {
+    background-color: var(--cor1);
+}
+
+nav {
+    padding: 10px;
+}
+
+nav > a {
+    color: var(--corBranco);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav > a:hover {
+    background-color: var(--cor2);
+}
+
+
+            /* ------------------------------------------- */
+
+
+body {
+    font-family: var(--fonte-padrao);
+}
+
+main {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-top: 20px;
+}
+
+section > div {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#nome-pokemon {
+    display: flex;
+}
+
+#nome-pokemon > h1 {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+#nome-pokemon > p {
+    color: #BBBAB8;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* elemetos (geral) */
+
+.elementos > p {
+    display: inline-block;
+    padding: 2px 20px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+/* elemetos específicos*/
+
+.elementos > .fire {
+    background-color: #FC7E27;
+}
+
+.elementos > .water {
+    color: var(--corBranco);
+    background-color: #4593C4;
+}
+
+.elementos > .ground {
+    background-color: #F8DE41;
+}
+
+.elementos > .rock {
+    background-color: #A38C22;
+}
+
+img#img-principal {
+    width: 400px;
+}
