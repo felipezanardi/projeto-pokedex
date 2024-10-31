@@ -113,3 +113,16 @@ h2 {
 img#img-principal {
     width: 400px;
 }
+
+#status > table {
+    width: 100%;
+}
+
+#status td, th {
+    font-weight: normal;
+    padding: 5px  0px;
+}
+
+#status th {
+    text-align: left;
+}
