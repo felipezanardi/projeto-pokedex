@@ -2,9 +2,8 @@
 to-do: 
     - adicionar fonte (SF Pro ou outra)
     - finalizar parte visual
-    - responsividade
+    - responsividade (nav)
     - mudar idioma
-    - tamanho elementos
 */
 
 @charset "UTF-8";
@@ -50,12 +49,16 @@ body {
 
 main {
     display: flex;
-    max-width: 800px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 900px;
     margin: auto;
+    text-align: justify;
 }
 
 section {
     margin-top: 20px;
+    width: fit-content;
 }
 
 section > div {
@@ -82,11 +85,17 @@ h2 {
     font-size: 1.5em;
 }
 
+div#weakness {
+    display: flexbox;
+    flex-wrap: wrap;
+}
+
 /* elemetos (geral) */
 
 .elementos > p {
     display: inline-block;
-    padding: 2px 20px;
+    padding: 2px 0px;
+    width: 80px;
     border-radius: 24px;
     text-align: center;
 }
@@ -110,7 +119,11 @@ h2 {
     background-color: #A38C22;
 }
 
-img#img-principal {
+#img-principal > img {
+    width: 400px;
+}
+
+div#story > p {
     width: 400px;
 }
 
