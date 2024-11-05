@@ -2,8 +2,10 @@
 to-do: 
     - adicionar fonte (SF Pro ou outra)
     - finalizar parte visual
-    - responsividade geral
+    - responsividade (apenas dos elementos)
+    - tamanho elementos
     - mudar idioma
+    - definir cores
 */
 
 @charset "UTF-8";
@@ -47,24 +49,6 @@ body {
     font-family: var(--fonte-padrao);
 }
 
-/*
-main {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%; / Substitui max-width: 900px /
-    max-width: 900px;
-    margin: auto;
-    text-align: justify;
-}
-
-section {
-    margin-top: 20px;
-    flex: 1 1 300px; / Ajusta a largura mínima e permite crescimento /
-    padding: 0 10px; / Adiciona um padding leve /
-}
-*/
-
 main {
     display: flex;
     justify-content: space-evenly;
@@ -73,20 +57,11 @@ main {
     margin: auto;
     text-align: justify;
 }
-/* 
-section {
-    margin-top: 20px;
-    width: 45%;
-    min-width: 350px;
-    / padding: 0px 10px; /
-    / talvez adicionar flex + padding de 15 /
-}
- */
+
 section {
     margin-top: 20px;
     flex: 1 1 250px;
     padding: 0px 15px;
-    /* talvez adicionar flex + padding de 15 */
 }
 
 section > div {
@@ -118,7 +93,7 @@ div#weakness {
     flex-wrap: wrap;
 }
 
-/* elemetos (geral) */
+/* elementos (geral) */
 
 .elementos > p {
     display: inline-block;
@@ -128,7 +103,7 @@ div#weakness {
     text-align: center;
 }
 
-/* elemetos específicos*/
+/* elementos específicos */
 
 .elementos > .fire {
     background-color: #FC7E27;
