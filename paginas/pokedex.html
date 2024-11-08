@@ -14,85 +14,85 @@
             <a href="#">FORMULÁRIO</a>
             <a href="#">PERFIL</a>
         </nav>
-        <input type="text" id="pokemon-input" placeholder="Digite o nome ou id">
-        <button onclick="fetchData()">Pesquisar</button>
+        <input type="text" id="search-input" placeholder="Digite o nome ou id">
+        <button id="search-button">Pesquisar</button>
     </header>
     <main>
         <section id="esquerda">
             <div>
                 <div id="nome-pokemon">
-                    <h1>Charmander</h1>
-                    <p>#004</p>
+                    <h1 id="pokemon-nome"></h1>
+                    <p>#<span id="pokemon-id"></span></p>
                 </div>
-                <div class="elementos">
-                    <p class="fire">Fire</p>
+                <div id="pokemon-tipos" class="pokemon-tipos-geral">
+                    
                 </div>
             </div>
 
             <div id="img-principal">
-                <img id="pokemon-img" src="../imagens/004 - Charmander.png" alt="Imagem Pokemon">
+                <img id="pokemon-img" src="" alt="Imagem Pokemon">
             </div>
 
             <div>
-                <h2>Evolutions</h2>
+                <h2>Evoluções</h2>
                 --
             </div>
         </section>
         <section id="direita">
             <div>
-                <h1>About</h1>
+                <h1>Informações</h1>
             </div>
             
             <div class="weakness">
-                <h2>Weakness</h2>
-                <div class="elementos">
-                    <p class="water">Water</p>
-                    <p class="ground">Ground</p>
-                    <p class="rock">Rock</p>
+                <h2>Fraquezas</h2>
+                <div class="pokemon-tipos-geral">
+                    <p class="water">Água</p>
+                    <p class="ground">Terrestre</p>
+                    <p class="rock">Pedra</p>
                 </div>
             </div>
 
             <div id="story">
-                <h2>Story</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perferendis provident dolorem error eveniet, beatae ipsa reprehenderit praesentium rerum et numquam reiciendis sed at? Aliquid aspernatur veniam cupiditate culpa ut.</p>
+                <h2>Descrição</h2>
+                <p id="pokemon-desc"></p>
             </div>
 
-            <div id="status">
-                <h2>Status</h2>
+            <div id="stats">
+                <h2>Stats</h2>
                 <table>
                     <tr>
                         <th>HP</td>
-                        <td>45</td>
-                        <td><progress value="45" max="100"></progress></td>
+                        <td id="num-hp">0</td>
+                        <td><progress id="pokemon-hp" value="" max="255"></progress></td>
                     </tr>
                     <tr>
                         <th>Ataque</td>
-                        <td>60</td>
-                        <td><progress value="60" max="100"></progress></td>
+                        <td id="num-atk">0</td>
+                        <td><progress id="pokemon-atk" value="" max="255"></progress></td>
                     </tr>
                     <tr>
                         <th>Defesa</td>
-                        <td>48</td>
-                        <td><progress value="48" max="100"></progress></td>
+                        <td id="num-def">0</td>
+                        <td><progress id="pokemon-def" value="" max="255"></progress></td>
                     </tr>
                     <tr>
-                        <th>Vel. Ataque</td>
-                        <td>66</td>
-                        <td><progress value="66" max="100"></progress></td>
+                        <th>Ataque Especial</td>
+                        <td id="num-atk-esp">0</td>
+                        <td><progress id="pokemon-atk-esp" value="" max="255"></progress></td>
                     </tr>
                     <tr>
-                        <th>Vel. Defesa</td>
-                        <td>66</td>
-                        <td><progress value="66" max="100"></progress></td>
+                        <th>Defesa Especial</td>
+                        <td id="num-def-esp">0</td>
+                        <td><progress id="pokemon-def-esp" value="" max="255"></progress></td>
                     </tr>
                         <th>Velocidade</td>
-                        <td>45</td>
-                        <td><progress value="45" max="100"></progress></td>
+                        <td id="num-vel">0</td>
+                        <td><progress id="pokemon-vel" value="" max="255"></progress></td>
                     </tr>
                 </table>
             </div>
         </section>
     </main>
-    <script src="../js/pokedex.js"></script>
+    <script src="../scripts/pokedex.js"></script>
 </body>
 </html>

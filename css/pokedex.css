@@ -1,11 +1,8 @@
 /* 
 to-do: 
     - adicionar fonte (SF Pro ou outra)
-    - finalizar parte visual
-    - responsividade (apenas dos elementos)
-    - tamanho elementos
-    - mudar idioma
-    - definir cores
+    - definir cores e navbar
+    - feats: fraquezas, evouluções
 */
 
 @charset "UTF-8";
@@ -88,38 +85,107 @@ h2 {
     font-size: 1.5em;
 }
 
+h1#pokemon-nome {
+    text-transform: capitalize;
+}
+
 div#weakness {
     display: flexbox;
     flex-wrap: wrap;
 }
 
-/* elementos (geral) */
+/* tipos (geral) */
 
-.elementos > p {
+.pokemon-tipos-geral > p {
     display: inline-block;
     padding: 2px 0px;
     width: 80px;
+    margin: 2px;
     border-radius: 24px;
     text-align: center;
+    text-transform: capitalize;
 }
 
-/* elementos específicos */
+/* tipos específicos */
 
-.elementos > .fire {
-    background-color: #FC7E27;
+.pokemon-tipos-geral > .bug {
+    background-image: linear-gradient(to bottom, #91C229, #ADC930);
 }
 
-.elementos > .water {
+.pokemon-tipos-geral > .dark {
+    background-image: linear-gradient(to bottom, #5A5266, #6F7886);
     color: var(--corBranco);
-    background-color: #4593C4;
 }
 
-.elementos > .ground {
-    background-color: #F8DE41;
+.pokemon-tipos-geral > .dragon {
+    background-image: linear-gradient(to bottom, #0269C2, #0084BD);
+    color: var(--corBranco);
 }
 
-.elementos > .rock {
-    background-color: #A38C22;
+.pokemon-tipos-geral > .electric {
+    background-image: linear-gradient(to bottom, #F4D339, #FAE377);
+}
+
+.pokemon-tipos-geral > .fairy {
+    background-image: linear-gradient(to bottom, #EE8EE7, #F5ACE6);
+}
+
+.pokemon-tipos-geral > .fighting {
+    background-image: linear-gradient(to bottom, #CF3E6A, #E4434B);
+    color: var(--corBranco);
+}
+
+.pokemon-tipos-geral > .fire {
+    background-image: linear-gradient(to bottom, #FF9D53, #FFB149);
+}
+
+.pokemon-tipos-geral > .flying {
+    background-image: linear-gradient(to bottom, #90AADE, #A8C2EF);
+}
+
+.pokemon-tipos-geral > .ghost {
+    background-image: linear-gradient(to bottom, #5269AE, #7C75D9);
+    color: var(--corBranco);
+}
+
+.pokemon-tipos-geral > .grass {
+    background-image: linear-gradient(to bottom, #60BA52, #63CB8E);
+}
+
+.pokemon-tipos-geral > .ground {
+    background-image: linear-gradient(to bottom, #DA7843, #D59B6C);
+    color: var(--corBranco);
+}
+
+.pokemon-tipos-geral > .ice {
+    background-image: linear-gradient(to bottom, #74CFC1, #94DED9);
+}
+
+.pokemon-tipos-geral > .normal {
+    background-image: linear-gradient(to bottom, #919AA2, #ABA9A0);
+}
+
+.pokemon-tipos-geral > .poison {
+    background-image: linear-gradient(to bottom, #A666C8, #CA60D7);
+    color: var(--corBranco);
+}
+
+.pokemon-tipos-geral > .psychic {
+    background-image: linear-gradient(to bottom, #F86D75, #FFA89C);
+}
+
+.pokemon-tipos-geral > .rock {
+    background-image: linear-gradient(to bottom, #C8B88C, #D8CE94);
+}
+
+.pokemon-tipos-geral > .steel {
+    background-image: linear-gradient(to bottom, #52889D, #56ADAE);
+    color: var(--corBranco);
+}
+
+.pokemon-tipos-geral > .water {
+    background-image: linear-gradient(to bottom, #4D91D7, #74C7E6);
+    color: var(--corBranco);
 }
 
 #img-principal > img {
@@ -130,15 +196,19 @@ div#story > p {
     width: 100%;
 }
 
-#status > table {
+/* p#pokemon-desc: {
+    
+} */
+
+#stats > table {
     width: 100%;
 }
 
-#status td, th {
+#stats td, th {
     font-weight: normal;
     padding: 5px  0px;
 }
 
-#status th {
+#stats th {
     text-align: left;
 }
