@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pokedex.css">
+    <link rel="stylesheet" href="../estilos/pokedex.css">
+    <link rel="stylesheet" href="../estilos/pokedex-tipos.css">
     <title>Pokedex</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
     <main>
         <section id="esquerda">
             <div>
-                <div id="nome-pokemon">
+                <div id="nome-id">
                     <h1 id="pokemon-nome"></h1>
                     <p>#<span id="pokemon-id"></span></p>
                 </div>
@@ -46,9 +47,9 @@
             <div class="weakness">
                 <h2>Fraquezas</h2>
                 <div class="pokemon-tipos-geral">
-                    <p class="water">Água</p>
-                    <p class="ground">Terrestre</p>
-                    <p class="rock">Pedra</p>
+                    <p class="water">Water</p>
+                    <p class="ground">Ground</p>
+                    <p class="rock">Rock</p>
                 </div>
             </div>
 
@@ -61,31 +62,32 @@
                 <h2>Stats</h2>
                 <table>
                     <tr>
-                        <th>HP</td>
+                        <th>HP</th>
                         <td id="num-hp">0</td>
                         <td><progress id="pokemon-hp" value="" max="255"></progress></td>
                     </tr>
                     <tr>
-                        <th>Ataque</td>
+                        <th>Ataque</th>
                         <td id="num-atk">0</td>
                         <td><progress id="pokemon-atk" value="" max="255"></progress></td>
                     </tr>
                     <tr>
-                        <th>Defesa</td>
+                        <th>Defesa</th>
                         <td id="num-def">0</td>
                         <td><progress id="pokemon-def" value="" max="255"></progress></td>
                     </tr>
                     <tr>
-                        <th>Ataque Especial</td>
+                        <th>Ataque Especial</th>
                         <td id="num-atk-esp">0</td>
                         <td><progress id="pokemon-atk-esp" value="" max="255"></progress></td>
                     </tr>
                     <tr>
-                        <th>Defesa Especial</td>
+                        <th>Defesa Especial</th>
                         <td id="num-def-esp">0</td>
                         <td><progress id="pokemon-def-esp" value="" max="255"></progress></td>
                     </tr>
-                        <th>Velocidade</td>
+                    <tr>
+                        <th>Velocidade</th>
                         <td id="num-vel">0</td>
                         <td><progress id="pokemon-vel" value="" max="255"></progress></td>
                     </tr>

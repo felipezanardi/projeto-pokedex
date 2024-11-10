@@ -1,0 +1,128 @@
+/* 
+to-do: 
+    - adicionar fonte (SF Pro ou outra)
+    - definir cores e navbar
+    - feats: fraquezas, evouluções
+*/
+
+@charset "UTF-8";
+
+:root {
+    --corPreto: #000000;
+    --corBranco: #FFFFFF;
+    --cor1: #E60033;
+    --cor2: #0095D9;
+
+    --fonte-padrao: SF Pro, Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+}
+
+header {
+    background-color: var(--cor1);
+}
+
+nav {
+    padding: 10px;
+}
+
+nav > a {
+    color: var(--corBranco);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav > a:hover {
+    background-color: var(--cor2);
+}
+
+
+            /* ------------------------------------------- */
+
+
+body {
+    font-family: var(--fonte-padrao);
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+}
+
+section {
+    margin-top: 20px;
+    flex: 1 1 250px;
+    padding: 0px 15px;
+}
+
+section > div {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#nome-id {
+    display: flex;
+}
+
+#nome-id > h1 {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+#nome-id > p {
+    color: #BBBAB8;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h1#pokemon-nome {
+    text-transform: capitalize;
+}
+
+div#weakness {
+    display: flexbox;
+    flex-wrap: wrap;
+}
+
+/* tipos (geral) */
+
+.pokemon-tipos-geral > p {
+    display: inline-block;
+    padding: 2px 0px;
+    width: 80px;
+    margin: 2px;
+    border-radius: 24px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#img-principal > img {
+    width: 100%;
+}
+
+div#story > p {
+    width: 100%;
+}
+
+#stats > table {
+    width: 100%;
+}
+
+#stats td, th {
+    font-weight: normal;
+    padding: 5px  0px;
+}
+
+#stats th {
+    text-align: left;
+}
