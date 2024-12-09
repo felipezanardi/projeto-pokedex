@@ -1,0 +1,290 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header{
+  background-color: red;
+}
+
+header img{
+  width: 100%;
+}
+
+nav {
+  background-color: #2a75bb;
+  color: white;
+  display: flex; 
+  justify-content: space-around;
+  padding: 0.5vh 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: red;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main-content {
+  text-align: center;
+  flex: 3;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content p{
+  text-align: left;
+}
+
+.main-content h2{
+  font-size: 5vh;
+}
+
+.main-content ul{
+  text-align: left;
+  list-style: none;
+  color: red;
+  text-decoration: underline;
+}
+
+.main-content ul li{
+  padding: 0.5vh;
+  font-size: 3vh;
+}
+
+.margin{
+  margin-bottom: 5vh; 
+}
+.extend{
+  width: 110vh;
+}
+.main-content .info{
+  text-align: center;
+  font-size: 2vh;
+  color: gray;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  color: #2a75bb;
+}
+
+.sidebar img{
+  height: 40vh;
+}
+
+footer {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  background-color: #2a75bb;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  width: auto;
+  bottom: 8vh;
+  right: 6vh;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+#up-arrow{
+  width: 4vh;
+}
+
+/*------------- CSS giovanni ------------------*/
+.divcarteirinha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.divcarteirinha .label-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.divcarteirinha .label-input label {
+  margin: 0;
+}
+
+.divcarteirinha select {
+  margin: 5px;
+}
+
+.divcarteirinha .label-input input[type="file"] {
+  width: auto;
+}
+
+#trainerCarteirinha {
+  position: relative;
+  width: 490px;
+  height: 316px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+#trainerNomeDisplay {
+  position: absolute;
+  top: 49px;
+  left: 17px;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+#trainerImagemDisplay {
+  position: absolute;
+  top: 96px;
+  left: 326px;
+  width: 152px;
+  height: 141px;
+  border-radius: 50px;
+}
+
+.pokemonSlot {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+}
+
+#pokemonSlot1 { top: 114px; left: 14px; }
+#pokemonSlot2 { top: 114px; left: 118px; }
+#pokemonSlot3 { top: 114px; left: 222px; }
+#pokemonSlot4 { top: 178px; left: 14px; }
+#pokemonSlot5 { top: 178px; left: 118px; }
+#pokemonSlot6 { top: 178px; left: 222px; }
+
+button {
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  
+}
+
+.divumterco{
+  flex: 1;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.divumterco img{
+  border-radius: 35px;
+}
+
+.divdoistercos {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  padding-right: 20px;
+}
+
+.divdoistercos input{
+  width: 50%;
+  
+}
+
+.divbg{
+  flex: 3;
+}
+
+.tabelabug{
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-bottom: double black 3px;
+  border-radius: 15px;
+}
+
+.tabelabug tr td{
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.tabelabug caption{
+  margin-bottom: 20px;
+  border-top: double black 3px;
+  border-radius: 15px;
+}
+
+textarea#descricao {
+  height: 80px;
+  width: 95%;
+  resize: none;
+}
+
+#Localizacao{
+  margin: 0px;
+  display: inline-block;
+  width: 30%;
+}
+
+.containerRelatorio {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  margin: auto;
+}
