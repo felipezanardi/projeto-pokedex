@@ -20,22 +20,33 @@ to-do:
     margin: 0px;
 }
 
-header {
-    background-color: var(--cor1);
+header{
+  background-color: red;
+}
+
+header img{
+  width: 100%;
 }
 
 nav {
-    padding: 10px;
+  background-color: #2a75bb;
+  color: white;
+  display: flex; 
+  justify-content: space-around;
+  padding: 0.5vh 0;
 }
 
-nav > a {
-    color: var(--corBranco);
-    text-decoration: none;
-    padding: 10px;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 12px;
+  transition: background-color 0.3s ease;
 }
 
-nav > a:hover {
-    background-color: var(--cor2);
+nav a:hover {
+  background-color: red;
+  border-radius: 8px;
 }
 
 
