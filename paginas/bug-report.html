@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="./imagens/logos/010-Caterpie- cortado.png" type="image/png">
+    <title>Reporte um bug</title>
+    <script src="JS/scriptsBug.js"></script>
+</head>
+<body>
+    <header>
+        <img src="midia/header.jpeg" alt="pokedex">
+  </header>
+  <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Pokedex</a>
+      <a href="Carteirinha.html">Carterinha pokemon</a>
+      <a href="bug-report.html">Reporte bugs</a>
+  </nav>
+
+    <div class="container">
+        <div class="divdoistercos">
+            <h2>Reporte um Bug</h2><br>
+            <p>Para reportar um bug no site, preencha o máximo de campos apresentados possíveis.</p>
+            <p>Se nescessário entraremos em contato através dos meios de comunicação informados.</p><br><br>
+            <label for="pesquisa">Pesquise para ver se o bug já tem solução ou se já está sendo investigado :</label><br>
+            <input type="search" id="pesquisa" name="pesquisa" placeholder="Busca Rápida" form="questionario">
+        </div>
+        <div class="divumterco">
+            <img src="./imagens/Bug-repot/butterfree-new.png" alt="GIF animado Butterfree comendo">
+        </div>
+    </div>
+    <div class="container">
+        <form id="questionario">
+            <div class="divbg">
+                <table class="tabelabug">
+
+                    <caption><h3>Dados de cadastro :</h3></caption>
+                    <tr>
+                        <td colspan="3"><label for="username">Login :</label> 
+                            <input type="text" id="username" name="username" placeholder="Username" required></td>
+                        
+                        <td colspan="3"><label for="senha">Senha :</label> 
+                            <input type="password" id="senha" name="senha" placeholder="*************" required></td>
+                        
+                        <td colspan="3"><label for="emaill">Email :</label>
+                            <input type="email" id="emaill" name="emaill" placeholder="seuemail@algo.com" required></td>
+                        
+                        <td colspan="3"><label for="cel">Telefone :</label>
+                            <input type="tel" id="cel" name="cel" pattern="\(\[0-9]{2}\)\[0-9]{5}-[0-9]{4}" placeholder="(xx)xxxxx-xxxx"></td>
+                        <td colspan="3"><label for="idade">Idade :</label>
+                            <input type="number" id="idade" name="idade" min="5" max="100" placeholder="25"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3"><label for="nome">Nome :</label>
+                            <input type="text" id="nome" name="nome" placeholder="Lucas"></td>
+                        
+                        <td colspan="3"><label for="sobrenome">Sobrenome :</label>
+                            <input type="text" id="sobrenome" name="sobrenome" placeholder="Silva"></td>
+                        
+                        <td colspan="3"><label for="nascimento">Data de nascimento :</label>
+                            <input type="date" id="nascimento" name="nascimento" min="1900-12-31" max="2023-12-31"></td>
+                        <td colspan="3"><label for="cor">Cor favorita :</label>
+                            <input type="color" id="cor" name="cor"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <div class="container margin">
+        <div class="divbg">
+            <table class="tabelabug">
+                <caption><h3>Informações sobre o bug :</h3><br></caption>
+        
+                <tr>        
+                    <td colspan="8"><p>Quantos bugs vai reportar :</p></td>
+                    <td colspan="8"><p>Qual o tipo de bug você está reportando :</p></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><label for="um">Um</label></td>
+                    <td colspan="4"><label for="varios">Mais de um</label></td>
+                    <td colspan="2"><label for="funci">Funcionalidade</label></td>
+                    <td colspan="2"><label for="conteudo">Conteúdo</label></td>
+                    <td colspan="2"><label for="gfc">Gráfico</label></td>
+                    <td colspan="2"><label for="outro">Outro</label></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input type="radio" id="um" value="Um" name="escolha" form="questionario" required></td>
+                    <td colspan="4"><input type="radio" id="varios" value="Vários" name="escolha" form="questionario" required></td>
+                    <td colspan="2"><input type="checkbox" id="Funcionalidade" value="Funcionalidade" name="tipo" form="questionario"></td>
+                    <td colspan="2"><input type="checkbox" id="conteudo" value="Conteúdo" name="tipo" form="questionario"></td>
+                    <td colspan="2"><input type="checkbox" id="grafico" value="Gráfico" name="tipo" form="questionario"></td>
+                    <td colspan="2"><input type="checkbox" id="outro" value="Outro" name="tipo" form="questionario"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="16"><h4>Dê o máximo de Informação possível sobre o ocorrido :</h4></td>
+                </tr>
+                <tr>       
+                    <td colspan="5"><label for="mes">Mês aproximado da primeira ocorrência :</label>
+                        <input type="month" id="mes" name="mes" form="questionario"></td>
+                    <td colspan="5"><label for="semana">Semana aproximada da primeira ocorrência :</label>
+                        <input type="week" id="semana" name="semana" form="questionario"></td>
+                    <td colspan="5"><label for="hora">Horário aproximado da primeira ocorrência :</label>
+                        <input type="time" id="hora" name="hora" form="questionario"></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><label for="acontecimento">Data e hora da última ocorrência :</label>
+                        <input type="datetime-local" id="acontecimento" name="acontecimento" form="questionario"></td>
+                    <td colspan="7"><label for="print" class="margemleft">Insira uma imagem que represente os bugs encontrados :</label>
+                        <input type="file" id="print" name="print" form="questionario"></td>
+                    <td colspan="3"><label for="impacto">O quão disruptivo foi o bug :</label>
+                        <input type="range" id="impacto" name="impacto" min="1" max="10" form="questionario"></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><label for="link">Insira o link da página que apresenta o bug :</label>
+                        <input type="url" id="link" name="link" form="questionario"></td>
+                    <td colspan="2"><label for="descricao">Descreva o bug :</label></td>
+                    <td colspan="9"><textarea id="descricao" name="descricao" placeholder="Descreva aqui o acontecimento" form="questionario" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="16"><label for="Localizacao">Clique para atualizar sua localização:</label>
+                        <button type="button" id="Localizacao">Obter Localização</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="hidden" id="latitude" name="latitude" value="Formulário de bug" form="questionario">
+                        <input type="hidden" id="longitude" name="longitude" value="Formulário de bug" form="questionario">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8"><input type="submit" value="Enviar formulário" form="questionario">
+                    <td colspan="8"><input type="reset" value="Resetar formulário" form="questionario"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Pokedex | Todos os direitos reservados.
+    </footer>
+</body>
+</html>
