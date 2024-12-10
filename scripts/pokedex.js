@@ -23,25 +23,36 @@ const num_vel = document.getElementById("num-vel");
 const search_input = document.getElementById("search-input");
 const search_button = document.getElementById("search-button");
 
+let descricoes = {};
+
+// carregar o json local
+fetch('pokemon-desc.json')
+    .then(response => response.json())
+    .then(data => {
+        descricoes = data;
+        console.log("Descrições carregadas do JSON");
+    })
+    .catch(error => console.error("Erro ao carregar o arquivo de descrições:", error));
+
 // busca
 search_button.addEventListener("click", () => {
-  if (search_input.value.trim() === "")
-  {
-    alert("Digite o nome ou o ID de um Pokémon...");
-  }
-  else
-  {
-    buscar_pokemon(search_input.value.toLowerCase());
-    search_input.value = "";
-  }
+    if (search_input.value.trim() === "")
+    {
+        alert("Digite o nome ou o ID de um Pokémon...");
+    }
+    else
+    {
+        buscar_pokemon(search_input.value.toLowerCase());
+        search_input.value = "";
+    }
 });
 
 // pesquisar pressionando 'enter'
 search_input.addEventListener("keyup", (event) => {
-  if (event.key === "Enter")
-  {
-    search_button.dispatchEvent(new MouseEvent("click"));
-  }
+    if (event.key === "Enter")
+    {
+        search_button.dispatchEvent(new MouseEvent("click"));
+    }
 });
 
 // função para buscar pokemon
@@ -50,26 +61,22 @@ function buscar_pokemon(nome_id)
   fetch(api + `pokemon/${nome_id}`)
     .then((data) => data.json())
     .then((json) => {
+      if (json.id > 151) {
+        alert("Somente pokémons da 1ª geração (1 a 151) estão disponíveis!");
+        return;
+      }
+
       document.getElementById("pokemon-id").innerHTML = json.id;
       pokemon_nome.innerHTML = json.name;
       pokemon_img.src = json.sprites.other.home.front_default;
 
-      // buscar descrição do pokemon
-      fetch(api + `pokemon-species/${json.id}`)
-        .then((data) => data.json())
-        .then((info) => {
-          const lang = info.flavor_text_entries.find(
-            (lang) => lang.language.name === "en"
-          );
-          if (lang)
-          {
-            pokemon_desc.innerHTML = lang.flavor_text.replace(/\f/g, " ");
-          }
-          else
-          {
-            pokemon_desc.innerHTML = "Descrição não disponível.";
-          }
-        });
+      // buscar descrição
+      const pokemonId = json.id;
+      if (descricoes[pokemonId]) {
+        pokemon_desc.innerHTML = descricoes[pokemonId].description;
+      } else {
+        pokemon_desc.innerHTML = "Descrição não disponível.";
+      }
 
       // stats
       pokemon_hp.value = json.stats[0].base_stat;
@@ -93,7 +100,6 @@ function buscar_pokemon(nome_id)
       if (json.types.length == 2)
       {
         pokemon_tipos.innerHTML += `<p class="${json.types[0].type.name}">${json.types[0].type.name}</p>`;
-
         pokemon_tipos.innerHTML += `<p class="${json.types[1].type.name}">${json.types[1].type.name}</p>`;
       }
       else
@@ -101,7 +107,10 @@ function buscar_pokemon(nome_id)
         pokemon_tipos.innerHTML += `<p class="${json.types[0].type.name}">${json.types[0].type.name}</p>`;
       }
     })
-    .catch((error) => console.error("Erro ao buscar Pokémon:", error)); // reportar erro no console
+    .catch((error) => {
+      alert("Pokémon não encontrado.");
+      console.error("Erro ao buscar Pokémon:", error); // reportar erro no console
+    });
 }
 
 // carregar a página com o id 1
