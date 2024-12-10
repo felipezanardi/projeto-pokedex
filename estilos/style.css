@@ -238,6 +238,7 @@ button {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  background-color: white;
   text-align: justify;
   border-radius: 10px;
   padding: 20px;
